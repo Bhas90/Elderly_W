@@ -46,7 +46,7 @@ const WhyChooseAndContactForm = () => {
             visitTime: new Date().toISOString(),
           };
   
-          await fetch("https://elderly-w-backend.vercel.app/home/notify-admin", {
+          await fetch("https://elderly-w-backend-hwfq686vw-bhaskars-projects-9d41f48c.vercel.app/home/notify-admin", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(visitData),
@@ -81,7 +81,7 @@ const WhyChooseAndContactForm = () => {
   
     setIsSubmitting(true);
   
-    fetch('https://elderly-w-backend.vercel.app/home/send-email', {
+    fetch('https://elderly-w-backend-hwfq686vw-bhaskars-projects-9d41f48c.vercel.app/home/send-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
