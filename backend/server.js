@@ -7,7 +7,12 @@ const requestIp = require('request-ip');
 const app = express();
 const port = 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: ["https://wolverhampton.britishelderlycare.com"], // Add frontend domain
+  methods: ["POST", "GET"],
+  allowedHeaders: ["Content-Type"]
+}));
+
 app.use(bodyParser.json());
 app.use(requestIp.mw());
 
