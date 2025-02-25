@@ -8,7 +8,7 @@ const app = express();
 const port = 5000;
 
 app.use(cors({
-  origin: "*", // Add frontend domain
+  origin: ["https://wolverhampton.britishelderlycare.com"], // Add frontend domain
   methods: ["POST", "GET"],
   allowedHeaders: ["Content-Type"]
 }));
