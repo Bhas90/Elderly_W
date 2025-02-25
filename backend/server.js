@@ -132,7 +132,7 @@ app.post('/home/send-email', (req, res) => {
 });
 
 // 📌 Endpoint: Notify Admin When a Visitor Arrives
-app.post('/notify-admin', (req, res) => {
+app.post('/home/notify-admin', (req, res) => {
   const { ip, city, region, country, browser, referrer, visitTime } = req.body;
 
   const mailOptions = {
