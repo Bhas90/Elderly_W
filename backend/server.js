@@ -8,10 +8,14 @@ const app = express();
 const port = 5000;
 
 app.use(cors({
-  origin: ["https://wolverhampton.britishelderlycare.com"], // Add frontend domain
-  methods: ["POST", "GET"],
-  allowedHeaders: ["Content-Type"]
+  origin: "https://wolverhampton.britishelderlycare.com", // Allow frontend domain
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true // If using cookies or authentication headers
 }));
+
+// Handle Preflight Requests
+app.options("*", cors());
 
 app.use(bodyParser.json());
 app.use(requestIp.mw());
