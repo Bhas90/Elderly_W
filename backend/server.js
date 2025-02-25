@@ -26,7 +26,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // 📌 Endpoint: Send Contact Form Data to Admin & Client
-app.post('home/send-email', (req, res) => {
+app.post('/home/send-email', (req, res) => {
   const {
     name, email, mobile, age, postCode, existingCare, service,
     healthConditions, careTiming, hoursPerDay, daysPerWeek, emergencyContact, fundingSource, livingArrangements, pageUrl
